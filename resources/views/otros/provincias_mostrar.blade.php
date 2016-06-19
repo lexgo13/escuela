@@ -64,6 +64,7 @@
         @foreach($provinciass as $prov)
           <tr>
             <td> {{$prov->nombre}} </td>
+            <td> <button>botón</button></td>
           </tr>
         @endforeach 
       
