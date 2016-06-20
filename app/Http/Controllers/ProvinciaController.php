@@ -24,7 +24,7 @@ class ProvinciaController extends Controller
     public function index()
     {
         $provinciass = Provincia::orderBy('id', 'desc')->paginate(10);
-        return view('otros.provincias_mostrar')->with('provinciass',$provinciass);
+        return view('otros.provincia.provincias_mostrar')->with('provinciass',$provinciass);
     }
 
     /**
@@ -34,7 +34,7 @@ class ProvinciaController extends Controller
      */
     public function create()
     {
-         return view('/otros/provincia_registrar');
+         return view('/otros/provincia/provincia_registrar');
     }
 
     /**

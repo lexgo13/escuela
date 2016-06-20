@@ -29,7 +29,7 @@ class PaisController extends Controller
      */
     public function create()
     {
-          return view('/otros/pais_registrar');
+          return view('/otros/pais/pais_registrar');
     }
 
     /**
