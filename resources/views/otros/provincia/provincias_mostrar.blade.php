@@ -64,7 +64,9 @@
         @foreach($provinciass as $prov)
           <tr>
             <td> {{$prov->nombre}} </td>
-            <td> <button>botón</button></td>
+            <td> 
+              <a href="{{ route('/provincias_editar{$prov->id}') }}" class="btn btn-default btn-sm">Editar</a>
+            </td>
           </tr>
         @endforeach 
       

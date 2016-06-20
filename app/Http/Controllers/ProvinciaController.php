@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Session;
+
 use App\Provincia;
 
 
@@ -85,7 +85,10 @@ class ProvinciaController extends Controller
      */
     public function edit($id)
     {
-        //
+        // find the post in the database and save as a var
+        $provinciass = Provincia::find($id);
+        // return the view and pass in the var we previously created
+        return view('otros.provincia.provincias_editar')->with('provinciass',$provinciass);
     }
 
     /**
@@ -97,7 +100,30 @@ class ProvinciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         // Validate the data
+        $provinciass = Post::find($id);
+        
+        $this->validate($request, array(
+                'nombre' => 'required|max:255|min:5|',
+                            ));
+
+
+        
+
+        // Save the data to the database
+
+        $provincia = new Provincia;
+
+        $provincia->nombre = $request->nombre;
+
+
+        $provincia->save();
+
+        // set flash data with success message
+        //Session::flash('success', 'This post was successfully saved.');
+
+        // redirect with flash data to posts.show
+        return Redirect::to('#');
     }
 
     /**

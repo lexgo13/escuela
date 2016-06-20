@@ -27,5 +27,10 @@ Route::post('/pais_registrar', 'PaisController@store');
 Route::get('/provincia_registrar', 	'ProvinciaController@create');
 Route::post('/provincia_registrar', 'ProvinciaController@store');
 Route::get('/provincias_mostrar',   'ProvinciaController@index');
+
+Route::put('/provincias_editar/{$id}',   'ProvinciaController@edit');
+
+Route::put('/provincias_editar/{$id}',   'ProvinciaController@update');
+
 // Route::get('/provincias_mostrar/{id}', ['uses' => 'ProvinciaController@show', 'as' => 'provincias.show']);
 
