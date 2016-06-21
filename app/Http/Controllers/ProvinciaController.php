@@ -24,7 +24,7 @@ class ProvinciaController extends Controller
     public function index()
     {
         $provinciass = Provincia::orderBy('id', 'desc')->paginate(10);
-        return view('otros.provincia.provincias_mostrar')->with('provinciass',$provinciass);
+        return view('otros.provincia.index')->with('provinciass',$provinciass);
     }
 
     /**
@@ -34,7 +34,7 @@ class ProvinciaController extends Controller
      */
     public function create()
     {
-         return view('/otros/provincia/provincia_registrar');
+         return view('otros.provincia.store');
     }
 
     /**
@@ -74,7 +74,8 @@ class ProvinciaController extends Controller
      */
     public function show($id)
     {
-        //  
+        $unaprovincia = Provincia::find($id);
+        return view('otros.provincia.show')->with('unaprovincia',$unaprovincia);  
     }
 
     /**
@@ -86,9 +87,9 @@ class ProvinciaController extends Controller
     public function edit($id)
     {
         // find the post in the database and save as a var
-        $provinciass = Provincia::find($id);
+        $unaprovincia = Provincia::find($id);
         // return the view and pass in the var we previously created
-        return view('otros.provincia.provincias_editar')->with('provinciass',$provinciass);
+        return view('otros.provincia.edit')->with('unaprovincia',$unaprovincia);
     }
 
     /**
@@ -101,10 +102,10 @@ class ProvinciaController extends Controller
     public function update(Request $request, $id)
     {
          // Validate the data
-        $provinciass = Post::find($id);
+        $provinciass = Provincia::find($id);
         
         $this->validate($request, array(
-                'nombre' => 'required|max:255|min:5|',
+                'nombre' => 'required|max:255|min:5',
                             ));
 
 
@@ -112,12 +113,12 @@ class ProvinciaController extends Controller
 
         // Save the data to the database
 
-        $provincia = new Provincia;
+        
 
-        $provincia->nombre = $request->nombre;
+        $provinciass->nombre = $request->nombre;
 
 
-        $provincia->save();
+        $provinciass->save();
 
         // set flash data with success message
         //Session::flash('success', 'This post was successfully saved.');

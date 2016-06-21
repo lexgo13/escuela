@@ -73,7 +73,8 @@
           <ul class="dropdown-menu">
             <li><a href="pais_registrar">Registrar Paises</a></li>
             <li><a href="provincia_registrar">Registrar Provincias</a></li>
-            <li><a href="provincias_mostrar">Mostrar Provincias</a></li>
+            <li><a href="provincias.show">Mostrar Provincias una</a></li>
+             <li><a href="provincias.index">Mostrar Provincias</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li role="separator" class="divider"></li>
