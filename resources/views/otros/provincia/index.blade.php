@@ -68,6 +68,8 @@
             <td> {{$prov->nombre}} </td>
             <td> 
               <a href="{{ route('provincia.show', $prov->id ) }}" class="btn btn-default btn-sm">Ver</a>
+           
+
               <a href="{{ route('provincia.edit', $prov->id ) }}" class="btn btn-default btn-sm">Edit</a>
             </td>
           </tr>
@@ -77,6 +79,35 @@
 
   </table>
 </div>
+
+
+
+<a href="/home" class="btn btn-primary"> Atrás</a>
+
+
+<style>
+    footer {
+      background-color: #f5f5f5;
+      
+      width: 100%;
+      height: 50px;
+      bottom: 0px;
+      
+      margin:0 auto auto auto;
+
+      position: relative;
+      
+      
+      border-top: 1px ;
+    }
+</style>
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted text-center">Copyright© alexander magno </p>
+  </div>
+</footer>
+
 
 
     <!-- jQuery library -->

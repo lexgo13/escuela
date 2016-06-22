@@ -81,7 +81,7 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i> Registrar País</button>
-                                   <button type="button" class="btn btn-primary">Cancelar</button>
+                                   <a type="button" href="/home"class="btn btn-primary">Cancelar</a>
                             </div>
                         </div>
                     </form>

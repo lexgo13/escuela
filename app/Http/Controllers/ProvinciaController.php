@@ -23,7 +23,7 @@ class ProvinciaController extends Controller
      */
     public function index()
     {
-        $provinciass = Provincia::orderBy('id', 'desc')->paginate(10);
+        $provinciass = Provincia::orderBy('id', 'desc')->paginate(8);
         return view('otros.provincia.index')->with('provinciass',$provinciass);
     }
 
