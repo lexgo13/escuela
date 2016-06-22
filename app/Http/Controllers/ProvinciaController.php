@@ -34,7 +34,7 @@ class ProvinciaController extends Controller
      */
     public function create()
     {
-         return view('otros.provincia.store');
+         return view('otros.provincia.create');
     }
 
     /**
@@ -102,7 +102,7 @@ class ProvinciaController extends Controller
     public function update(Request $request, $id)
     {
          // Validate the data
-        $provinciass = Provincia::find($id);
+        $unaprovincia = Provincia::find($id);
         
         $this->validate($request, array(
                 'nombre' => 'required|max:255|min:5',
@@ -113,12 +113,12 @@ class ProvinciaController extends Controller
 
         // Save the data to the database
 
-        
+      
 
-        $provinciass->nombre = $request->nombre;
+        $unaprovincia->nombre = $request->nombre;
 
 
-        $provinciass->save();
+        $unaprovincia->save();
 
         // set flash data with success message
         //Session::flash('success', 'This post was successfully saved.');

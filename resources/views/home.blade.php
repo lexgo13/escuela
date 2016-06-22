@@ -72,9 +72,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Otros <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="pais_registrar">Registrar Paises</a></li>
-            <li><a href="provincia_registrar">Registrar Provincias</a></li>
-            <li><a href="provincias.show">Mostrar Provincias una</a></li>
-             <li><a href="provincias.index">Mostrar Provincias</a></li>
+            <li><a href="provincia/create">Registrar Provincias</a></li>
+            <li><a href="provincia">Mostrar Provincias index</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li role="separator" class="divider"></li>
@@ -82,8 +81,8 @@
           </ul>
         </li>
 
-      </ul>
-   
+      
+         </ul>
       <ul class="nav navbar-nav navbar-right">
         
         <li class="dropdown">

@@ -52,6 +52,8 @@
     </div><!-- /.container-fluid -->
   </nav>
 
+<h3>Lista de todas las Provincias</h3>
+
 
 
 <div class="container">
@@ -65,8 +67,8 @@
           <tr>
             <td> {{$prov->nombre}} </td>
             <td> 
-              <a href="{{ route('provincias.show', $prov->id ) }}" class="btn btn-default btn-sm">Ver</a>
-              <a href="{{ route('provincias.edit', $prov->id ) }}" class="btn btn-default btn-sm">Edit</a>
+              <a href="{{ route('provincia.show', $prov->id ) }}" class="btn btn-default btn-sm">Ver</a>
+              <a href="{{ route('provincia.edit', $prov->id ) }}" class="btn btn-default btn-sm">Edit</a>
             </td>
           </tr>
         @endforeach 

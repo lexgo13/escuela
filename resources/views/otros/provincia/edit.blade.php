@@ -26,16 +26,7 @@
         <a class="navbar-brand" href="/home">Escuela</a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-         
-       
 
-       
-
-
-        </ul>
      
         <ul class="nav navbar-nav navbar-right">
           
@@ -54,57 +45,43 @@
     </div><!-- /.container-fluid -->
   </nav>
 
+  <div class="row">
+    {!! Form::model($unaprovincia, ['route' => ['provincia.update', $unaprovincia->id], 'method' => 'PUT']) !!}
+    <div class="col-md-8">
+      {{ Form::label('nombre', 'Nuevo nombre de la provincia:') }}
+      {{ Form::text('nombre', null, ["class" => 'form-control input-lg']) }}
+    </div>
 
-<style>
- 
+    <div class="col-md-4">
+      <div class="well">
+        <dl class="dl-horizontal">
+          <dt>Created At:</dt>
+          <dd>{{ date('M j, Y h:ia', strtotime($unaprovincia->created_at)) }}</dd>
+        </dl>
 
-
-
-</style>
-
-  <div class="container" id="container_registro_provincia">
-      <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-              <div class="panel panel-default">
-                  <div class="panel-heading">Editar Provincia</div>
-                  <div class="panel-body">
-                      <form class="form-horizontal" role="form" method="POST" action="{{ url('/provincias_update/{$id}') }}">
-                          {{ csrf_field() }}
-                          
-                       
-                        
-                          <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                              <label for="name" class="col-md-4 control-label">Nuevo nombre de la provincia {{$unaprovincia->nombre}}</label>
-
-                              <div class="col-md-6">
-                              {{ method_field('PUT') }}
-
-                                  <input id="name" type="text" class="form-control" name="nombre" value="{{ old('nombre') }}">
-
-                                  @if ($errors->has('nombre'))
-                                      <span class="help-block">
-                                          <strong>{{ $errors->first('nombre') }}</strong>
-                                      </span>
-                                  @endif
-                              </div>
-                          </div>
-                   
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">Editar Provincia</button>
-                                 <a href="{{ url('/home') }}" class="btn btn-info" role="button">Cancelar</a> 
-                                </div>
-                          </div>
-                      </form>
-                  </div>
-              </div>
+        <dl class="dl-horizontal">
+          <dt>Last Updated:</dt>
+          <dd>{{ date('M j, Y h:ia', strtotime($unaprovincia->updated_at)) }}</dd>
+        </dl>
+        <hr>
+        <div class="row">
+          <div class="col-sm-6">
+            {!! Html::linkRoute('provincia.index', 'Cancel', array($unaprovincia->id), array('class' => 'btn btn-danger btn-block')) !!}
           </div>
-      </div>
-  </div>
+          <div class="col-sm-6">
+            {{ Form::submit('Save Changes', ['class' => 'btn btn-success btn-block']) }}
+          </div>
+        </div>
 
-<!-- 
-  
- -->
+      </div>
+    </div>
+    {!! Form::close() !!}
+  </div>  <!-- end of .row (form) -->
+
+
+
+
+
 
 
 
