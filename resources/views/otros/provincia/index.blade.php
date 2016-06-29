@@ -61,15 +61,18 @@
 
 		<h3>Lista de todas las Provincias</h3>
 
-		<a href="/home" class="btn btn-primary btn-bg"> Atrás</a>
-
-<div class="container">
+		<a href="/home" class="btn btn-success btn-bg" id="agregarProvincia"> Nueva Provincia</a>
 
 
 
-  <table class="table">
+
+<div class="container" id="contedorProvincias">
+
+
+
+  <table class="table" id="contedorTabla">
     <thead>
-      <tr>Nombre de Provincia</tr>
+      <tr>  <h2>  Nombre de Provincia </h2> </tr>
     </thead>
     <tbody>
       
@@ -98,7 +101,7 @@
 
   </table>
 
-<a href="/home" class="btn btn-primary"> Atrás</a>
+<a href="/home" class="btn btn-primary" id="botonSalir"> Salir</a>
 
 
 </div>
@@ -122,6 +125,33 @@
 </div>
 
 <style>
+
+
+
+#contedorProvincias{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+
+}
+
+
+#agregarProvincia {
+     position: absolute;
+    top: 80px;
+		right: 540px;
+}
+
+
+#botonSalir {
+     position: absolute;
+    bottom: 40px;
+		right: 510px;
+}
+
+
     footer {
       background-color: #f5f5f5;
       
