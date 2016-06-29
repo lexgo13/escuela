@@ -72,18 +72,21 @@
       
         @foreach($provinciass as $prov)
           <tr>
-            <td> {{$prov->nombre}} </td>
+            <td> {{$prov->nombre}} </td>          
             <td> 
-           <!--    <a href="{{ route('provincia.show', $prov->id ) }}" class="btn btn-default btn-sm">Ver</a> -->
-           
-                <a href="{{ route('provincia.show', $prov->id ) }}" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ver</a>
-            
-
-             
-              <a href="{{ route('provincia.edit', $prov->id ) }}" class="btn btn-default btn-sm">Edit</a>
-
-              <a href="{{ route('provincia.destroy', $prov->id ) }}" class="btn btn-default btn-sm">Eliminar</a>
-
+              <div class="btn-group btn-group-sm">
+                  <div class="btn-group">
+                      <a href="{{ route('provincia.show', $prov->id ) }}" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ver</a>
+                   </div>   
+                  <div class="btn-group">
+                      <a href="{{ route('provincia.edit', $prov->id ) }}" class="btn btn-default btn-sm">Edit</a>
+                    </div>
+                  <div class="btn-group">
+                      {!! Form::open(['route' => ['provincia.destroy', $prov->id], 'method' => 'DELETE']) !!}
+                      {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-sm']) !!}
+                      {!! Form::close() !!}
+                    </div>
+                </div> <!-- div del grupo principal -->
             </td>
           </tr>
         @endforeach 

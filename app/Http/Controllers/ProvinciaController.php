@@ -137,9 +137,9 @@ class ProvinciaController extends Controller
     {
         $unaprovincia = Provincia::find($id);
 
-        $unaprovincia::destroy();
+        $unaprovincia::destroy($id);
 
        
-         //return Redirect::to('provincia.index');
+         return Redirect::to('provincia');
     }
 }
