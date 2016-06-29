@@ -81,6 +81,9 @@
 
              
               <a href="{{ route('provincia.edit', $prov->id ) }}" class="btn btn-default btn-sm">Edit</a>
+
+              <a href="{{ route('provincia.destroy', $prov->id ) }}" class="btn btn-default btn-sm">Eliminar</a>
+
             </td>
           </tr>
         @endforeach 
