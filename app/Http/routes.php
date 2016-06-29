@@ -33,7 +33,9 @@ Route::post('pais_registrar', 'PaisController@store');
 
 // Route::put('provincias_update/{$id}',   'ProvinciaController@update');
 
-// Route::get('provincias_mostraruna/{$id}',   'ProvinciaController@show');
+Route::get('hola', function(){
+return view('otros/provincia/hola');
+});
 
 // Route::get('/provincias_mostrar/{id}', ['uses' => 'ProvinciaController@show', 'as' => 'provincias.show']);
 

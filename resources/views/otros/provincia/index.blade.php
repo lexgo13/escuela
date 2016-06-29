@@ -8,6 +8,13 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   </head>
   <body>
 
@@ -67,9 +74,12 @@
           <tr>
             <td> {{$prov->nombre}} </td>
             <td> 
-              <a href="{{ route('provincia.show', $prov->id ) }}" class="btn btn-default btn-sm">Ver</a>
+           <!--    <a href="{{ route('provincia.show', $prov->id ) }}" class="btn btn-default btn-sm">Ver</a> -->
            
+                <a href="{{ route('provincia.show', $prov->id ) }}" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ver</a>
+            
 
+             
               <a href="{{ route('provincia.edit', $prov->id ) }}" class="btn btn-default btn-sm">Edit</a>
             </td>
           </tr>
@@ -84,6 +94,19 @@
 
 <a href="/home" class="btn btn-primary"> Atrás</a>
 
+<div class="bs-example">
+    <!-- Button HTML (to Trigger Modal) -->
+  
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal" tabindex="" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Content will be loaded here from "remote.php" file -->
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
     footer {
@@ -102,6 +125,27 @@
     }
 </style>
 
+<!-- <script> CUANDO EL MODAL PIERDA EL FOCO QUE ME REDIRIJA A LA RUTA "PROVINCIA" ;)
+$(document).ready(function(){
+    $("#jquery").click(function(){
+        $("#cont").load("otros/provincia/hola.html");
+    });
+
+      $("#jquery").click(function(){
+        $("#cont").load("otros/provincia/hola.html");
+    });
+
+  
+
+    $("#mimod").click(function() {
+       $("#myModal" ).removeData('modal-content');
+});
+
+
+});
+</script> -->
+
+
 <footer class="footer">
   <div class="container">
     <p class="text-muted text-center">Copyright© alexander magno </p>
@@ -110,11 +154,6 @@
 
 
 
-    <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
 </html>
