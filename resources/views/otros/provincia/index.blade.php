@@ -59,11 +59,14 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-<h3>Lista de todas las Provincias</h3>
+		<h3>Lista de todas las Provincias</h3>
 
-
+		<a href="/home" class="btn btn-primary btn-bg"> Atrás</a>
 
 <div class="container">
+
+
+
   <table class="table">
     <thead>
       <tr>Nombre de Provincia</tr>
@@ -94,11 +97,15 @@
     </tbody>    
 
   </table>
+
+<a href="/home" class="btn btn-primary"> Atrás</a>
+
+
 </div>
 
 
 
-<a href="/home" class="btn btn-primary"> Atrás</a>
+
 
 <div class="bs-example">
     <!-- Button HTML (to Trigger Modal) -->
