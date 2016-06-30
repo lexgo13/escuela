@@ -8,6 +8,8 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="css/escuela.css">
+
 
     <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -61,7 +63,7 @@
 
 		<h3>Lista de todas las Provincias</h3>
 
-		<a href="/home" class="btn btn-success btn-bg" id="agregarProvincia"> Nueva Provincia</a>
+		<a href="{{ route('provincia.create') }}"  class="btn btn-success btn-bg" id="agregarProvincia"> Nueva Provincia</a>
 
 
 
@@ -101,10 +103,24 @@
 
   </table>
 
-<a href="/home" class="btn btn-primary" id="botonSalir"> Salir</a>
 
 
 </div>
+
+
+
+<div class="container">    
+   
+     {{$provinciass->links()}}           
+    
+
+         <a href="/home" class="btn btn-primary btn-sm" id="botonSalir"> Salir</a>
+</div>
+
+
+
+
+
 
 
 
@@ -128,68 +144,17 @@
 
 
 
-#contedorProvincias{
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 20px;
-
-}
 
 
-#agregarProvincia {
-     position: absolute;
-    top: 80px;
-		right: 540px;
-}
 
 
-#botonSalir {
-     position: absolute;
-    bottom: 40px;
-		right: 510px;
-}
 
 
-    footer {
-      background-color: #f5f5f5;
-      
-      width: 100%;
-      height: 50px;
-      bottom: 0px;
-      
-      margin:0 auto auto auto;
 
-      position: relative;
-      
-      
-      border-top: 1px ;
-    }
 </style>
 
-<!-- <script> CUANDO EL MODAL PIERDA EL FOCO QUE ME REDIRIJA A LA RUTA "PROVINCIA" ;)
-$(document).ready(function(){
-    $("#jquery").click(function(){
-        $("#cont").load("otros/provincia/hola.html");
-    });
 
-      $("#jquery").click(function(){
-        $("#cont").load("otros/provincia/hola.html");
-    });
-
-  
-
-    $("#mimod").click(function() {
-       $("#myModal" ).removeData('modal-content');
-});
-
-
-});
-</script> -->
-
-
-<footer class="footer">
+<footer class="footer" id="footer_index">
   <div class="container">
     <p class="text-muted text-center">Copyright© alexander magno </p>
   </div>
