@@ -1,94 +1,24 @@
 <!DOCTYPE html>
-<html class = "full">
-    <head>
-       
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<html class = "full" id="welcome_full_class">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Mi hoja de estilos -->
+<link rel="stylesheet" href="css/escuela.css">
 
 <style>
-  
-  
-.full {
-  background: url(http://staticf5a.diaadia.info/sites/default/files/nota_periodistica/Libro_.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-  
-
-
-
-.navbar-default{
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-right: 0px;
-    margin-left: 0px;
-
-
-
-}
-.container-fluid {
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-
-
-
 .navbar {
     position: relative;
     min-height: 50px;
     margin-bottom: 20px;
     border: 0px solid transparent;
-}
-
-#la_e{
-    padding-right: 10px;
-    padding-left: 1px;
-    margin-right: 10px;
-    margin-left: 1px;
-
-}
-    #jumbo{
-
-  
-
-      background: url(http://images.123hdwallpapers.com/20150514/blurry-background-1920x1200.jpg) no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-
-
     }
-    
-    footer {
-      background-color: #f5f5f5;
-      
-      width: 100%;
-      height: 50px;
-      bottom: 0px;
-      
-      margin:0 auto auto auto;
-
-      position: relative;
-      
-      
-      border-top: 1px ;
-    }
-
-
-
   </style>
-
 
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
+  <nav class="navbar navbar-default" id="navbar_default_welcome">
+    <div class="container-fluid" id="container_fluid_welcome">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
           <img alt="Brand" src="b.png" id="la_e">     
@@ -101,28 +31,20 @@
     <h1 style="color:white;">Bienvenido al Sistema Escuela!</h1>
     <p style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nibh, vulputate a interdum eu, fermentum vel dolor. Cras et ligula at eros gravida tempor nec ut nunc. Vivamus posuere id tellus at aliquet. In eros erat, ornare eget leo nec, viverra porttitor ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas a nisl sit amet est finibus accumsan non ut nisi. Etiam in magna mattis, cursus mauris eu, luctus risus. Nulla ultrices pretium erat ut placerat. Nulla tellus ex, euismod ac consequat in, lobortis ut felis. Suspendisse quis porta lacus.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nibh, vulputate a interdum eu, fermentum vel dolor. Cras et ligula at eros gravida tempor nec ut nunc. Vivamus posuere id tellus at aliquet. In eros erat, ornare eget leo nec, viverra porttitor ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas a nisl sit amet est finibus accumsan non ut nisi. Etiam in magna mattis, cursus mauris eu, luctus risus. Nulla ultrices pretium erat ut placerat. Nulla tellus ex, euismod ac consequat in, lobortis ut felis. Suspendisse quis porta lacus.  
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc nibh, vulputate a interdum eu, fermentum vel dolor. Cras et ligula at eros gravida tempor nec ut nunc. Vivamus posuere id tellus at aliquet. In eros erat, ornare eget leo nec, viverra porttitor ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas a nisl sit amet est finibus accumsan non ut nisi. Etiam in magna mattis, cursus mauris eu, luctus risus. Nulla ultrices pretium erat ut placerat. Nulla tellus ex, euismod ac consequat in, lobortis ut felis. Suspendisse quis porta lacus.
+
     </p>
     
-    
     <div class="btn-group" role="group" aria-label="...">
-
-     
-     <a href="{{ url('/login') }}" class="btn btn-info" role="button">Login</a>
-     
+       <a href="{{ url('/login') }}" class="btn btn-info" role="button">Login</a>
    </div>
 
    <div class="btn-group" role="group" aria-label="...">
-    
-    <a href="{{ url('/register') }}" class="btn btn-info" role="button">Register</a>        
+      <a href="{{ url('/register') }}" class="btn btn-info" role="button">Register</a>        
   </div>
 
 </div>
 
-
-
-
-<footer class="footer">
+<footer class="footer" id="footer_welcome">
   <div class="container">
     <p class="text-muted text-center">Copyright© alexander magno </p>
   </div>

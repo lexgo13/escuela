@@ -1,26 +1,24 @@
-    
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
   <head>
-      <title></title>
+  <title></title>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/escuela.css">
+<!-- Mi hoja de estilos -->
+<link rel="stylesheet" href="css/escuela.css">
 
-
-    <!-- jQuery library -->
+<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   </head>
-  <body>
 
-      <nav class="navbar navbar-default">
+  <body>
+<nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -36,16 +34,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-         
-       
-
-       
-
-
         </ul>
      
         <ul class="nav navbar-nav navbar-right">
-          
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sesion <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -61,23 +52,16 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-		<h3>Lista de todas las Provincias</h3>
+<h3>Lista de todas las Provincias</h3>
 
-		<a href="{{ route('provincia.create') }}"  class="btn btn-success btn-bg" id="agregarProvincia"> Nueva Provincia</a>
-
-
-
+<a href="{{ route('provincia.create') }}"  class="btn btn-success btn-bg" id="agregarProvincia"> Nueva Provincia</a>
 
 <div class="container" id="contedorProvincias">
-
-
-
   <table class="table" id="contedorTabla">
     <thead>
       <tr>  <h2>  Nombre de Provincia </h2> </tr>
     </thead>
     <tbody>
-      
         @foreach($provinciass as $prov)
           <tr>
             <td> {{$prov->nombre}} </td>          
@@ -97,34 +81,15 @@
                 </div> <!-- div del grupo principal -->
             </td>
           </tr>
-        @endforeach 
-      
+        @endforeach   
     </tbody>    
-
   </table>
-
-
-
 </div>
 
-
-
-<div class="container">    
-   
-     {{$provinciass->links()}}           
-    
-
-         <a href="/home" class="btn btn-primary btn-sm" id="botonSalir"> Salir</a>
-</div>
-
-
-
-
-
-
-
-
-
+<div class="container" id="container_links_provincia">       
+      {{$provinciass->links()}}
+      <a href="/home" class="btn btn-primary btn-sm" id="botonSalir"> Salir</a>
+ </div>
 
 <div class="bs-example">
     <!-- Button HTML (to Trigger Modal) -->
@@ -140,28 +105,11 @@
     </div>
 </div>
 
-<style>
-
-
-
-
-
-
-
-
-
-
-</style>
-
-
 <footer class="footer" id="footer_index">
   <div class="container">
     <p class="text-muted text-center">Copyright© alexander magno </p>
   </div>
 </footer>
-
-
-
 
 </body>
 </html>
