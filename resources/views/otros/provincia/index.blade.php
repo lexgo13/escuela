@@ -84,13 +84,14 @@
         @endforeach   
     </tbody>    
   </table>
+      <div  id="container_links_provincia">
+    {{$provinciass->links()}}
+      
+   <a href="/home" class="btn btn-primary btn-md" id="botonSalir"> Salir</a>
+      </div> 
 </div>
-
-<div class="container" id="container_links_provincia">       
-      {{$provinciass->links()}}
-      <a href="/home" class="btn btn-primary btn-sm" id="botonSalir"> Salir</a>
- </div>
-
+ 
+      
 <div class="bs-example">
     <!-- Button HTML (to Trigger Modal) -->
   

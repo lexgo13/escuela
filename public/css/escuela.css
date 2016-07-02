@@ -14,18 +14,23 @@
         }
 
         #container_links_provincia{
-            background: #ff8000;
-            width: 300px;
+     /*       background: #ff8000;*/
+            /*display: inline;*/
+            width: 160px;
+         
+            float: left;
         }
 
-        #botonSalir {
-            position: relative;  
+    /*    #botonSalir {
+
+ 
+         position: relative;  
             right: 0px;
             top: 0px;
             margin-right: auto;
              margin-left: auto;
         }
-
+*/
         #agregarProvincia {
             position: absolute;
             top: 80px;

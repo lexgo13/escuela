@@ -35,14 +35,8 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
          
-       
-
-       
-
-
         </ul>
-     
-  
+       
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -52,8 +46,8 @@
       <li>Nombre de la Provincia: {{ $unaprovincia->nombre }}</li>
     </ul>
 
-<a type="button" href="provincia">cerrar</button>
+  <a href="provincia" class="btn btn-primary btn-sm">Cerrar</a>
+<!--    <a type="button btn-primary" href="provincia">cerrar</button> -->
 
   </body>
 </html>
-
