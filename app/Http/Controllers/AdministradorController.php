@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class AdministradorController extends Controller
@@ -17,7 +15,7 @@ class AdministradorController extends Controller
 
 
     public  function authenticated(){
-        $redirectTo ='adminprincipal';
+        return redirect('adminprincipal');
     }
 
 }
