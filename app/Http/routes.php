@@ -10,33 +10,43 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::group(['middleware'=> 'web'], function(){
 
-Route::get('/', function () {
-    return view('welcome');
+  Route::get('/', function () {
+      return view('welcome');
+  });
+
+  Route::auth();
+
+  Route::get('admin','AdministradorController@showLoginForm');
+  Route::post('admin','AdministradorController@login');
+
+  Route::get('adminprincipal','AdministradorController@authenticated');
+
+
+  Route::get('home', 'HomeController@index');
+
+  Route::get('alumnos_registro', 'PaginasController@getAlumnosRegistro');
+
+  Route::get('pais_registrar', 'PaisController@create');
+  Route::post('pais_registrar', 'PaisController@store');
+
+  //  Route::get('	provincia_registrar', 	'ProvinciaController@create');
+  // Route::post('provincia_registrar', 'ProvinciaController@store');
+
+  // Route::get('provincias_mostrar',   'ProvinciaController@index');
+
+  // Route::get('provincias_editar/{$id}', 'ProvinciaController@edit');
+
+  // Route::put('provincias_update/{$id}',   'ProvinciaController@update');
+
+  Route::get('hola', function(){
+  return view('otros/provincia/hola');
+  });
+
+  // Route::get('/provincias_mostrar/{id}', ['uses' => 'ProvinciaController@show', 'as' => 'provincias.show']);
+
+  Route::resource('provincia',   'ProvinciaController');
+
+
 });
-
-Route::auth();
-
-Route::get('home', 'HomeController@index');
-
-Route::get('alumnos_registro', 'PaginasController@getAlumnosRegistro');
-
-Route::get('pais_registrar', 'PaisController@create');
-Route::post('pais_registrar', 'PaisController@store');
-
-//  Route::get('	provincia_registrar', 	'ProvinciaController@create');
-// Route::post('provincia_registrar', 'ProvinciaController@store');
-
-// Route::get('provincias_mostrar',   'ProvinciaController@index');
-
-// Route::get('provincias_editar/{$id}', 'ProvinciaController@edit');
-
-// Route::put('provincias_update/{$id}',   'ProvinciaController@update');
-
-Route::get('hola', function(){
-return view('otros/provincia/hola');
-});
-
-// Route::get('/provincias_mostrar/{id}', ['uses' => 'ProvinciaController@show', 'as' => 'provincias.show']);
-
-Route::resource('provincia',   'ProvinciaController');
