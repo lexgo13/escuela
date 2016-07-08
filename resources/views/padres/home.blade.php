@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html class="full">
 <head>
-    <title>Página Principal de la Escuela</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<title>Página Principal de la Escuela</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -29,50 +34,28 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Alumnos <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="alumnos_registro">Registrar Alumno</a></li>
-            <li><a href="#">Listar Alumnos</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">Ver Consultas</a></li>
+            <li><a href="#">Ver Consultas</a></li>
           </ul>
         </li>
 
          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profesores <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Registrar Profesor</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">Ver Profesores</a></li>
+            <li><a href="#">Realizar Consultas</a></li>
+            <li><a href="#">Otros</a></li>
           </ul>
         </li>
 
           <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inscripciones <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prenscripciones <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Nueva Inscripción</a></li>
-            <li><a href="#">Cobros</a></li>
+            <li><a href="#">Nueva Preinscripción</a></li>
+            <li><a href="#">Pagos</a></li>
             <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-
-          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Otros <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="pais_registrar">Registrar Paises</a></li>
-            <li><a href="provincia/create">Registrar Provincias</a></li>
-            <li><a href="provincia">Mostrar Provincias index</a></li>
-          </ul>
-        </li>
-
 
          </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -82,7 +65,6 @@
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="{{ url('/logout') }}">Cerrar Sesión</a></li>
           </ul>
@@ -92,36 +74,27 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-
-
-
-
-
+  <h1  >Bienvenidos Padres</h1>
 
 <style>
     footer {
       background-color: #f5f5f5;
-
       width: 100%;
       height: 50px;
       bottom: 0px;
-
       margin:0 auto auto auto;
-
       position: absolute;
-
-
       border-top: 1px ;
     }
 
 
-.full {
-  background: url(http://staticf5a.diaadia.info/sites/default/files/nota_periodistica/Libro_.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+    .full {
+      background: url(https://www.enfoque.global/wp-content/uploads/2015/09/leer-libros-8-9.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
 
 </style>
 
@@ -130,13 +103,6 @@
     <p class="text-muted text-center">Copyright© alexander magno </p>
   </div>
 </footer>
-
-
-    <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
 </html>

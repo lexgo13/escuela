@@ -13,7 +13,6 @@ class AdministradorController extends Controller
     protected $loginView = 'administradores.login';
     protected $guard = 'admin';
 
-
     public  function authenticated(){
         return redirect('adminprincipal');
     }

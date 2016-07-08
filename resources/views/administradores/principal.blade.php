@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html class="full">
 <head>
-    <title>Página Principal de la Escuela</title>
+<title>Página Principal de la Escuela</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+ <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-
-
-
-
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -24,8 +26,6 @@
         </button>
         <a class="navbar-brand" href="#">Escuela</a>
       </div>
-
-
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -100,10 +100,6 @@
 
 
 
-
-
-
-
 <style>
     footer {
       background-color: #f5f5f5;
@@ -121,6 +117,7 @@
     }
 
 
+
 .full {
   background: url(http://staticf5a.diaadia.info/sites/default/files/nota_periodistica/Libro_.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -136,13 +133,6 @@
     <p class="text-muted text-center">Copyright© alexander magno </p>
   </div>
 </footer>
-
-
-    <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
 </html>

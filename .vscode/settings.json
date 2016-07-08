@@ -3,5 +3,11 @@
     "files.autoSave": "afterDelay",
      "files.autoSaveDelay": 20,
 
-       "editor.fontFamily": "'Cantarell', 'Courier New', monospace, 'Droid Sans Fallback'"
+       "editor.fontFamily": "'Cantarell', 'Courier New', monospace, 'Droid Sans Fallback'",
+       // Aplicar sangría a las secciones <head> y <body>.
+    "html.format.indentInnerHtml": true,
+        // El número de espacios a los que equivale una tabulación.
+    "editor.tabSize": 6,
+        // Controla si el editor debe dar formato automáticamente a la línea después de escribirla
+    "editor.formatOnType": true
 }

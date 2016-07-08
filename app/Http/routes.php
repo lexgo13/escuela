@@ -43,3 +43,8 @@ Route::group(['middleware'=> 'web'], function(){
   // Route::get('/provincias_mostrar/{id}', ['uses' => 'ProvinciaController@show', 'as' => 'provincias.show']);
 
   Route::resource('provincia',   'ProvinciaController');
+
+  //Padres
+  Route::get('padresprincipal', function(){
+  return view('padres/home');
+  });
