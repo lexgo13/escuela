@@ -55,11 +55,11 @@
     </p>
 
     <div class="btn-group" role="group" aria-label="...">
-     <a href="{{ url('admin') }}" class="btn btn-info" role="button">Login</a>
+     <a href="{{ url('adminn') }}" class="btn btn-info" role="button">Login</a>
     </div>
 
      <div class="btn-group" role="group" aria-label="...">
-        <a href="{{ url('/register') }}" class="btn btn-info" role="button">Register (TODAVIA REGISTRA USUARIOS COMUNES)</a>
+        <a href="{{ url('admin/create') }}" class="btn btn-info" role="button">Register (TODAVIA REGISTRA USUARIOS COMUNES)</a>
     </div>
 </div>
 
