@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 //Utilizando traits de auth por defecto........................................
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 //...............................................................................
 use App\Administrador;
 
@@ -47,7 +48,7 @@ class AdministradorController extends Controller
 
              // validate the data
         $this->validate($request, array(
-                'name' => 'required|max:255|min:5|unique:provincia',
+                'name' => 'required|max:255|min:5',
                             ));
 
         // store in the database
@@ -57,13 +58,13 @@ class AdministradorController extends Controller
         $administrador->name = $request->name;
         $administrador->rol = $request->rol;
         $administrador->email = $request->email;
-        $administrador->password = $request->password;
+        $administrador->password = bcrypt($request->password);
 
         $administrador->save();
 
 
 
-        return Redirect::to('#');
+      	return view('administradores.login');
 
     }
 
