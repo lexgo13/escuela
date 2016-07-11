@@ -61,6 +61,8 @@
          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">USUARIOS <span class="caret"></span></a>
          <ul class="dropdown-menu">
            <li><a href="admin/create">Nuevo Administrador</a></li>
+           <li><a href="admin">Ver Administradores</a></li>
+
            <li><a href="/register">Nuevo Padre o Tutor</a></li>
            <li><a href="#">Nuevo Profesor</a></li>
          </ul>
@@ -95,7 +97,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sesion <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="#">nombre de usuario proximamenteeee</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>

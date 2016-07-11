@@ -11,6 +11,12 @@
 |
 */
 Route::group(['middleware'=> 'web'], function(){
+  Route::get('adminn','AdministradorController@showLoginForm');
+  Route::post('adminn','AdministradorController@login');
+  Route::resource('admin', 'AdministradorController');
+
+
+
 });
 
 
@@ -21,9 +27,6 @@ Route::group(['middleware'=> 'web'], function(){
   Route::auth();
 
   //Rutas de administradores ---------------------------------------------------
-  Route::get('adminn','AdministradorController@showLoginForm');
-  Route::post('adminn','AdministradorController@login');
-  Route::resource('admin', 'AdministradorController');
 
 
   Route::get('adminprincipal', function(){
