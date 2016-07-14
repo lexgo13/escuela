@@ -18,14 +18,17 @@ use App\Administrador;
 
 class AdministradorController extends Controller
 {
-  // 	use AuthenticatesUsers;
+
+
+
+  	use AuthenticatesUsers;
     protected $guard = 'admin';
     protected $loginView = 'administradores.login';
 
-
-    public  function authenticated(){
-        return redirect('adminprincipal');
-    }
+	
+    //public  function authenticated(){
+    //    return redirect('adminprincipal');
+    //}
 
 
     /**

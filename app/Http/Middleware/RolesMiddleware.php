@@ -15,7 +15,10 @@ class RolesMiddleware
      */
     public function handle($request, Closure $next)
     {
-        
+
+      if ($request->input('email') ==('administrador@hotmail.com')) {
+            return redirect('hola');
+        }
         return $next($request);
     }
 }

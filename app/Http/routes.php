@@ -11,32 +11,36 @@
 |
 */
 Route::group(['middleware'=> 'web'], function(){
-  Route::get('adminn','AdministradorController@showLoginForm');
-  Route::post('adminn','AdministradorController@login');
-  Route::resource('admin', 'AdministradorController');
+
+
+      Route::post('adminn','AdministradorController@login');
+      Route::get('adminn','AdministradorController@showLoginForm');
+      Route::resource('admin', 'AdministradorController');
+
 
 
 
 });
 
 
-  Route::get('/', function () {
-      return view('welcome');
-  });
 
-  Route::auth();
+
+      Route::get('/', function () {
+      return view('welcome');
+        });
+
+        Route::auth();
 
   //Rutas de administradores ---------------------------------------------------
 
-
-  Route::get('adminprincipal', function(){
-  return view('administradores/principal');
-  });
+    Route::get('adminprincipal', function(){
+      return view('administradores/principal');
+    });
 
 
   // Rutas de Prueba -----------------------------------------------------------
 
-  Route::get('home', 'HomeController@index');
+    Route::get('home', 'HomeController@index');
 
 
   // Rutas de Alumnos -----------------------------------------------------------
